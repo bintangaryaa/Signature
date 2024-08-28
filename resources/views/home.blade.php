@@ -154,12 +154,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('report') }}">REPORT ADMIN</a>
                 <ul class="nav flex-column ms-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('report.subitem1') }}">Subitem 1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('report.subitem2') }}">Subitem 2</a>
-                    </li>
                 </ul>
             </li>
         </ul>

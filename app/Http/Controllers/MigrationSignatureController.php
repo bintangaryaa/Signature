@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Signature; // Import model jika perlu
+use App\Models\Signature; // Import model Signature
+use App\Models\ListFileSignature; // Import model ListFileSignature
 
 class MigrationsignatureController extends Controller
 {
@@ -30,6 +31,12 @@ class MigrationsignatureController extends Controller
                 ->get();
         }
 
-        return view('migrationsignature', ['results' => $results]);
+        $listFileSignatures = ListFileSignature::all(); // Ambil data dari model sesuai kebutuhan
+        
+        // Mengembalikan view dengan data
+        return view('migrationsignature', [
+            'listFileSignatures' => $listFileSignatures,
+            'results' => $results
+        ]);
     }
 }
